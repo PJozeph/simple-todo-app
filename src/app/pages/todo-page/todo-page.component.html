@@ -1,0 +1,8 @@
+<app-todo-input (onAddClickEvent)="onAdd($event)"></app-todo-input>
+<div *ngFor="let item of todoItems">
+    <app-todo-item
+        [id]="item.id"
+        [name]="item.name"
+        [description]="item.description"
+        (onDoneClickEvent)="onComplete($event)"></app-todo-item>
+</div>
